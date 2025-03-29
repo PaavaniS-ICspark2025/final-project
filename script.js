@@ -12,7 +12,8 @@ function run(){
     img.classList.add('mole')
     img.src = 'imgs/mole.png'
 
-    img.addEventListener('click', (event) => {
+    img.addEventListener('click', function() {
+        img.style.pointerEvents = "none";
         score += 10
         scoreEl.textContent = score
         img.src = 'imgs/mole-whacked.png'
